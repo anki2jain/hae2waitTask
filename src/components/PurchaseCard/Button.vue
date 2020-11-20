@@ -1,36 +1,22 @@
 <template>
-  <div class="button-container ">
+  <button class="btn">
     Confirm
-  </div>
+  </button>
 </template>
 
-<style lang="scss">
-.button-container {
-  /* CTA */
+<script>
+export default {};
+</script>
 
+<style lang="scss" scoped>
+.btn {
+  border-radius: 30px;
+  padding: 8px 35px;
+  font-weight: bold;
   width: 320px;
   height: 56px;
-
-  /* $brandColorPrimary */
   background: #1b31a8;
-  border-radius: 32px;
 
-  /* button-lg--neutral-white */
-
-  //   width: 64px;
-  //   height: 20px;
-  left: calc(50% - 64px / 2);
-  top: calc(50% - 20px / 2);
-
-  font-family: Work Sans;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  /* identical to box height, or 125% */
-  text-align: center;
-
-  /* $neutralWhite */
-  color: #ffffff;
+  color: white;
 }
 </style>

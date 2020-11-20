@@ -25,8 +25,8 @@ export default {
 .purchase-card {
   background: white;
 
-  height: 500px;
-  width: 500px;
+  height: fit-content;
+  width: fit-content;
   padding: 25px 40px;
   background: #ffffff;
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);

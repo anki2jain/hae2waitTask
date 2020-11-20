@@ -2,7 +2,7 @@
   <div class="home ">
     <navigation-bar></navigation-bar>
     <div class="title">Let's plan your saving goal.</div>
-    <PurchaseCard class="offset-md-4"></PurchaseCard>
+    <PurchaseCard class="m-auto"></PurchaseCard>
   </div>
 </template>
 
@@ -24,7 +24,9 @@ export default {
 
 <style lang="scss">
 .home {
-  background: #e5e5e5;
+  background: #f4f8fa;
+
+  align-items: center;
   height: 100vh;
 
   .title {
@@ -36,15 +38,7 @@ export default {
     line-height: 120%;
     text-align: center;
 
-    /* $brandColorPrimary */
     color: #1b31a8;
-
-    /* Inside Auto Layout */
-    flex: none;
-    order: 0;
-    align-self: stretch;
-    flex-grow: 0;
-    margin: 0px 10px;
   }
 }
 </style>
