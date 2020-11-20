@@ -43,10 +43,16 @@ export default {
   background: white;
 
   height: fit-content;
-  width: fit-content;
+  width: 500px;
   padding: 25px 40px;
   background: #ffffff;
   box-shadow: 0px 16px 32px rgba(30, 42, 50, 0.08);
   border-radius: 8px;
+}
+
+@media only screen and (max-width: 500px) {
+  .purchase-card {
+    width: fit-content;
+  }
 }
 </style>

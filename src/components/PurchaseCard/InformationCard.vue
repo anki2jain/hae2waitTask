@@ -7,7 +7,8 @@
 
     <div class="message-section">
       <h6>
-        You’re planning <span>{{ months }} monthly deposits</span> to reach your
+        You’re planning <span>{{ months + 1 }} monthly deposits</span> to reach
+        your
         <span>$ {{ amount }}</span>
         goal <span> by {{ listOfMonths[getDate()] }} {{ getYear() }}.</span>
       </h6>
