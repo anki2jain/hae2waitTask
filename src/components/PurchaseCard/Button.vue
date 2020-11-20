@@ -19,4 +19,8 @@ export default {};
 
   color: white;
 }
+.btn:hover {
+  color: white;
+  box-shadow: 0px 5px 20px rgba($color: #1b31a8, $alpha: 0.5);
+}
 </style>

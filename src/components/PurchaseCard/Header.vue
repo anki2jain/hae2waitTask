@@ -22,29 +22,21 @@
     text-align: left;
     margin-left: 10px;
     h3 {
-      /* LG / headingSmall */
       font-family: Rubik;
       font-style: normal;
       font-weight: 500;
       font-size: 24px;
       line-height: 120%;
-      /* identical to box height, or 29px */
-
-      /* $blueGray900 */
       color: #1e2a32;
 
       margin: 0px 10px;
     }
     h5 {
-      /* LG / paragraph */
       font-family: Work Sans;
       font-style: normal;
       font-weight: normal;
       font-size: 16px;
       line-height: 150%;
-      /* identical to box height, or 24px */
-
-      /* $blueGray400 */
       color: #708797;
 
       margin: 0px 10px;

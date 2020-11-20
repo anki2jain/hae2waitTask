@@ -2,20 +2,66 @@
   <div class="information-container">
     <div class="upper-section">
       <h5>Monthly amount</h5>
-      <h4 class="ml-auto">
-        $ 541
-      </h4>
+      <h4 class="ml-auto">$ {{ getMonthlyAmount }}</h4>
     </div>
 
     <div class="message-section">
       <h6>
-        You’re planning <span>48 monthly deposits</span> to reach your
-        <span>$25,000</span>
-        goal <span> by October 2020.</span>
+        You’re planning <span>{{ months }} monthly deposits</span> to reach your
+        <span>$ {{ amount }}</span>
+        goal <span> by {{ listOfMonths[getDate()] }} {{ getYear() }}.</span>
       </h6>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    amount: String,
+    months: Number,
+  },
+  data: () => ({
+    listOfMonths: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
+  }),
+  methods: {
+    getDate() {
+      let date = new Date();
+      var newDate = new Date(date.setMonth(date.getMonth() + this.months));
+      return newDate.getMonth();
+    },
+
+    getYear() {
+      let date = new Date();
+      var newDate = new Date(date.setMonth(date.getMonth() + this.months));
+      return newDate.getFullYear();
+    },
+  },
+  computed: {
+    getMonthlyAmount() {
+      if (this.amount == "" || this.amount == null) {
+        return "NA";
+      } else if (this.months == 0) {
+        return this.amount;
+      }
+      return (parseFloat(this.amount) / (this.months + 1)).toFixed(); // rounded off the calculated amount
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .information-container {
@@ -58,31 +104,18 @@
   }
   .message-section {
     background: #f4f8fa;
-    padding: 20px 0px;
+    padding: 20px 20px;
     h6 {
-      position: static;
-      left: 0%;
-      right: 0%;
-      top: 0%;
-      bottom: 0%;
-
-      /* caption */
       font-family: Work Sans;
       font-style: normal;
       font-weight: normal;
       font-size: 12px;
       line-height: 16px;
-      /* or 133% */
-
-      /* $blueGray900 */
       color: #1e2a32;
-
-      /* Inside Auto Layout */
-      flex: none;
-      order: 0;
-      align-self: stretch;
-      flex-grow: 0;
       margin: 0px 10px;
+    }
+    span {
+      font-weight: bold;
     }
   }
 }

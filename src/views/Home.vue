@@ -1,7 +1,7 @@
 <template>
   <div class="home ">
     <navigation-bar></navigation-bar>
-    <div class="title">Let's plan your saving goal.</div>
+    <div class="title">Let's plan your <span>saving goal.</span></div>
     <PurchaseCard class="m-auto"></PurchaseCard>
   </div>
 </template>
@@ -39,6 +39,9 @@ export default {
     text-align: center;
 
     color: #1b31a8;
+    span {
+      font-weight: bold;
+    }
   }
 }
 </style>

@@ -1,8 +1,11 @@
 <template>
   <div class="purchase-card text-center">
     <Header></Header>
-    <TextField></TextField>
-    <InformationCard></InformationCard>
+    <TextField
+      @amount-update="amountUpdate"
+      @month-update="monthUpdate"
+    ></TextField>
+    <InformationCard :amount="amount" :months="totalMonths"></InformationCard>
     <Button class="mt-auto"></Button>
   </div>
 </template>
@@ -18,6 +21,20 @@ export default {
     Header,
     TextField,
     InformationCard,
+  },
+
+  data: () => ({
+    amount: "",
+    totalMonths: 0,
+  }),
+
+  methods: {
+    amountUpdate(val) {
+      this.amount = val;
+    },
+    monthUpdate(val) {
+      this.totalMonths = val;
+    },
   },
 };
 </script>
